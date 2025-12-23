@@ -15,7 +15,7 @@ const modalImage = document.getElementById("modalImage");
 const modalInstructions = document.getElementById("modalInstructions");
 const ingredientList = document.getElementById("ingredientList");
 
-// ===== CLASE RECETA  (POO - opcional recomendado)  =====
+// ===== CLASE RECETA  (POO - opcional )  =====
 class Receta {
     constructor({ idMeal, strMeal, strMealThumb }) {
         this.id = idMeal;
@@ -145,3 +145,4 @@ container.addEventListener("click", (e) => {
         buscarRecetaPorId(e.target.dataset.id);
     }
 });
+
