@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ivan Salazar">
+    
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Buscador de Recetas - Gourmet Go</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="text-center py-4 bg-dark text-white shadow-sm">
+        <h1>Gourmet Go</h1>
+        <p class="lead">Encuentra recetas por ingredientes</p>
+    </header>
+
+    <!-- BUSCADOR -->
+    <section class="container my-4">
+        <form id="searchForm" class="d-flex justify-content-center gap-3">
+            <input 
+                id="searchInput"
+                type="text"
+                class="form-control w-50"
+                placeholder="Busca por ingrediente..."
+                required
+            >
+            <button class="btn btn-primary">Buscar</button>
+        </form>
+    </section>
+
+    <!-- LOADER -->
+    <div id="loader" class="loader d-none"></div>
+
+    <!-- RESULTADOS -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4 text-white">Resultados</h2>
+        <div class="row" id="recipeContainer"></div>
+    </section>
+
+    <!-- MODAL DETALLE -->
+    <div class="modal fade" id="recipeModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <img id="modalImage" class="img-fluid rounded mb-3" alt="">
+                    
+                    <h6>Ingredientes</h6>
+                    <ul id="ingredientList"></ul>
+
+                    <h6 class="mt-3">Instrucciones</h6>
+                    <p id="modalInstructions"></p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">
+                        Volver a resultados
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

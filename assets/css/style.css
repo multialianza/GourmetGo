@@ -1,0 +1,50 @@
+/* ==== ESTILOS GENERALES ==== */
+
+body {
+    background-image: url("../img/fondocomida11.jpg");
+    /*background: #3e83e9;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+    z-index: -1;
+}
+
+/* Tarjetas */
+.card {
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+/* Loader */
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #0d6efd;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 30px auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Mensaje sin resultados */
+.no-results {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+}
